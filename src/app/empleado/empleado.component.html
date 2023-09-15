@@ -1,0 +1,17 @@
+<div class="comp-empleado">
+  <h1>Componente Empleado</h1>
+  <form>
+    <label>Nombre</label>
+    <br>
+    <input type="text" name="nombre" [(ngModel)]="empleadoEntidad.nombre" placeholder="Ingrese nombre"/>
+    <br>
+    <br>
+    <label>Edad</label>
+    <br>
+    <input type="text" name="edad" [(ngModel)]="empleadoEntidad.edad"  placeholder="Ingrese edad"/>
+    <br>
+    <br>
+    <button type="button" (click)="agregarEmpleado()">Agregar</button>
+  </form>
+</div>
+

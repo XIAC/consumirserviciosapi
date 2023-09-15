@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { Empleado } from './models/empleado.model';
+import { ListaEmpleadoComponent } from './lista-empleado/lista-empleado.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyectoservicios';
+  empleado : Empleado;
+  @ViewChild(ListaEmpleadoComponent) listaEmpleadoComponente? : ListaEmpleadoComponent;
+  constructor() {
+    this.empleado = new Empleado;
+  }
+  recibirEmpleado(event : Empleado){
+    this.empleado = event;
+    this.listaEmpleadoComponente?.agregarLista(this.empleado);
+  }
+
 }
