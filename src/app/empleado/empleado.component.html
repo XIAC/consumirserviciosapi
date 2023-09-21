@@ -1,17 +1,14 @@
 <div class="comp-empleado">
-  <h1>Componente Empleado</h1>
+  <p-panel header="Componente Empleado">
   <form>
-    <label>Nombre</label>
-    <br>
-    <input type="text" name="nombre" [(ngModel)]="empleadoEntidad.nombre" placeholder="Ingrese nombre"/>
-    <br>
-    <br>
-    <label>Edad</label>
-    <br>
-    <input type="text" name="edad" [(ngModel)]="empleadoEntidad.edad"  placeholder="Ingrese edad"/>
-    <br>
-    <br>
-    <button type="button" (click)="agregarEmpleado()">Agregar</button>
+    <label class="pr-5">Nombre</label>
+    <input [ngModelOptions]="{standalone: true}" type="text" pInputText [(ngModel)]="empleadoEntidad.nombre" />
+    <label class="pr-5">Edad</label>
+    <input [ngModelOptions]="{standalone: true}" type="text" pInputText [(ngModel)]="empleadoEntidad.edad" />
+    <p-button type="button" (click)="agregarEmpleado()" label="Cancelar"></p-button>
+    <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
   </form>
+  </p-panel>
+
 </div>
 
